@@ -6,7 +6,7 @@
         <div class="row">
             <h1 class="center">To-Do Vue</h1>
         </div>
-        <ToDoItem v-for="(todo, index) in list"
+        <ToDoItem v-for="(todo, index) in items"
                   :todo="todo"
                   @delete="onRemove"
                   :key="index"/>
@@ -37,7 +37,7 @@
         },
         data() {
             return {
-                list: [
+                items: [
                     {
                         text: 'Learn Vue.js'
                     },
@@ -52,12 +52,12 @@
 
         methods: {
             createNewToDoItem() {
-                this.list.push({ text: this.todo});
+                this.items.push({ text: this.todo});
                 this.todo = '';
             },
 
             onRemove(removed) {
-                this.list = this.list.filter(item => item !== removed);
+                this.items = this.items.filter(item => item !== removed);
             }
 
         },
