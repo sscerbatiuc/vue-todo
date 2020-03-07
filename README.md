@@ -1,3 +1,4 @@
+![Vue To-Do](![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 # Vue.js To-Do
 
 ## Project setup
